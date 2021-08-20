@@ -1,0 +1,62 @@
+2021-08-21 00:52:29 debug: Server started and running on port : 3000
+2021-08-21 00:52:30 debug: Connection has been established successfully.
+2021-08-21 02:53:52 debug: Server started and running on port : 3000
+2021-08-21 02:53:52 debug: Connection has been established successfully.
+2021-08-21 02:56:30 http: GET / 200 4.280 ms - 111
+2021-08-21 02:56:56 debug: Server started and running on port : 3000
+2021-08-21 02:56:56 debug: Connection has been established successfully.
+2021-08-21 02:57:07 debug: Server started and running on port : 3000
+2021-08-21 02:57:07 debug: Connection has been established successfully.
+2021-08-21 02:57:24 debug: Server started and running on port : 3000
+2021-08-21 02:57:24 debug: Connection has been established successfully.
+2021-08-21 02:57:25 http: GET / 200 5.081 ms - 38
+2021-08-21 02:58:33 http: POST /users/ 404 2.550 ms - 146
+2021-08-21 02:59:04 http: POST /users/signup 400 5.481 ms - 154
+2021-08-21 03:01:39 http: GET /api-docs/ 404 0.872 ms - 148
+2021-08-21 03:01:47 http: GET /api-docs/ 404 0.676 ms - 148
+2021-08-21 03:03:29 http: GET /api-docs/ 404 0.735 ms - 148
+2021-08-21 03:04:14 error: undefined
+2021-08-21 03:04:14 error: Error message: Invalid salt. Salt must be in the form of: $Vers$log2(NumRounds)$saltvalue,Req details: /users/signup - POST - ::1
+2021-08-21 03:04:14 http: POST /users/signup 500 26.062 ms - 88
+2021-08-21 03:05:44 debug: Server started and running on port : 3000
+2021-08-21 03:05:44 debug: Connection has been established successfully.
+2021-08-21 03:05:47 error: undefined
+2021-08-21 03:05:47 error: Error message: Invalid salt. Salt must be in the form of: $Vers$log2(NumRounds)$saltvalue,Req details: /users/signup - POST - ::1
+2021-08-21 03:05:47 http: POST /users/signup 500 28.227 ms - 88
+2021-08-21 03:06:25 info: 10
+2021-08-21 03:06:25 debug: Server started and running on port : 3000
+2021-08-21 03:06:25 debug: Connection has been established successfully.
+2021-08-21 03:09:44 info: 10
+2021-08-21 03:09:44 debug: Server started and running on port : 3000
+2021-08-21 03:09:44 debug: Connection has been established successfully.
+2021-08-21 03:10:14 debug: Server started and running on port : 3000
+2021-08-21 03:10:14 debug: Connection has been established successfully.
+2021-08-21 03:10:43 debug: Server started and running on port : 3000
+2021-08-21 03:10:43 debug: Connection has been established successfully.
+2021-08-21 03:10:53 debug: Server started and running on port : 3000
+2021-08-21 03:10:53 debug: Connection has been established successfully.
+2021-08-21 03:11:28 debug: Server started and running on port : 3000
+2021-08-21 03:11:28 debug: Connection has been established successfully.
+2021-08-21 03:15:00 debug: Server started and running on port : 3000
+2021-08-21 03:15:00 debug: Connection has been established successfully.
+2021-08-21 03:16:03 debug: Server started and running on port : 3000
+2021-08-21 03:16:03 debug: Connection has been established successfully.
+2021-08-21 03:16:49 debug: Server started and running on port : 3000
+2021-08-21 03:16:49 debug: Connection has been established successfully.
+2021-08-21 03:18:04 debug: Server started and running on port : 3000
+2021-08-21 03:18:04 debug: Connection has been established successfully.
+2021-08-21 03:20:09 debug: Server started and running on port : 3000
+2021-08-21 03:20:09 debug: Connection has been established successfully.
+2021-08-21 03:21:39 debug: Server started and running on port : 3000
+2021-08-21 03:21:39 debug: Connection has been established successfully.
+2021-08-21 03:22:39 debug: Server started and running on port : 3000
+2021-08-21 03:22:39 debug: Connection has been established successfully.
+2021-08-21 03:22:41 http: POST /users/signup 404 140.346 ms - 38
+2021-08-21 03:25:24 error: undefined
+2021-08-21 03:25:24 error: Error message: Cannot read property 'then' of undefined,Req details: /users/signup - POST - ::1
+2021-08-21 03:25:24 http: POST /users/signup 500 101.031 ms - 54
+2021-08-21 03:27:08 debug: Server started and running on port : 3000
+2021-08-21 03:27:08 debug: Connection has been established successfully.
+2021-08-21 03:27:13 http: POST /users/signup 200 235.366 ms - 24
+2021-08-21 03:27:25 debug: Server started and running on port : 3000
+2021-08-21 03:27:25 debug: Connection has been established successfully.

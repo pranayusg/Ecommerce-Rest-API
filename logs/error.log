@@ -1,0 +1,6 @@
+2021-08-21 03:04:14 error: undefined
+2021-08-21 03:04:14 error: Error message: Invalid salt. Salt must be in the form of: $Vers$log2(NumRounds)$saltvalue,Req details: /users/signup - POST - ::1
+2021-08-21 03:05:47 error: undefined
+2021-08-21 03:05:47 error: Error message: Invalid salt. Salt must be in the form of: $Vers$log2(NumRounds)$saltvalue,Req details: /users/signup - POST - ::1
+2021-08-21 03:25:24 error: undefined
+2021-08-21 03:25:24 error: Error message: Cannot read property 'then' of undefined,Req details: /users/signup - POST - ::1
