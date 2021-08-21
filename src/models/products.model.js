@@ -3,13 +3,19 @@ const sequelize = require("./connection");
 
 const methods = {};
 
-const productsDataModel = sequelize.define("products", {
-  id: { type: Sequelize.INTEGER, primaryKey: true },
-  name: { type: Sequelize.STRING(50) },
-  description: Sequelize.STRING(5000),
-  price: Sequelize.INTEGER,
-  cat_id: Sequelize.INTEGER,
-});
+const productsDataModel = sequelize.define(
+  "products",
+  {
+    id: { type: Sequelize.INTEGER, primaryKey: true },
+    name: { type: Sequelize.STRING(500) },
+    description: Sequelize.STRING(5000),
+    price: Sequelize.INTEGER,
+    cat_id: Sequelize.INTEGER,
+  },
+  {
+    timestamps: false,
+  }
+);
 
 methods.create = (product) => {
   return new Promise((resolve, reject) => {
@@ -41,10 +47,12 @@ methods.getAll = () => {
   return new Promise((resolve, reject) => {
     sequelize
       .query(
-        `select P.id,P.name,P.description,P.price,C.title
+        `select P.id,P.name,P.description,P.price,C.title as category
       from ecommerce.products P
       inner join ecommerce.category C
-      on P.cat_id=C.id`
+      on P.cat_id=C.id
+      order by P.id`,
+        { type: sequelize.QueryTypes.SELECT }
       )
       .then((results) => {
         resolve(results);
@@ -59,8 +67,8 @@ methods.findByIdAndUpdate = (id, product) => {
   return new Promise((resolve, reject) => {
     productsDataModel
       .update({ price: product.price }, { where: { id: id } })
-      .then(() => {
-        resolve();
+      .then((count) => {
+        resolve(count[0]);
       })
       .catch((err) => {
         reject(err);
@@ -72,8 +80,8 @@ methods.removeById = (id) => {
   return new Promise((resolve, reject) => {
     productsDataModel
       .destroy({ where: { id: id } })
-      .then(() => {
-        resolve();
+      .then((count) => {
+        resolve(count);
       })
       .catch((err) => {
         reject(err);

@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
 const usersModel = require("../models/users.model");
 const logger = require("../lib/logger");
+const mailService = require("../services/mail.service");
 
 const saltRounds = parseInt(process.env.SALT_ROUNDS);
 
@@ -49,6 +50,9 @@ const signup = (req, res, next) => {
               })
               .catch((err) => {
                 logger.error(err);
+                res.status(500).json({
+                  message: "Unable to save User",
+                });
               });
           }
         })
@@ -78,7 +82,7 @@ const signin = (req, res, next) => {
               };
               const token = jwt.sign(payload, process.env.PRIVATE_KEY, options);
 
-              mailService.sentMail(`${req.body.mail} has signed in`);
+              // mailService.sentMail(`${req.body.mail} has signed in`);
 
               res.status(200).json({
                 message: "Login Successfull",

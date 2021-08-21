@@ -9,8 +9,11 @@ router.all("*", checkAuth);
 router
   .route("/")
   .get(productsControllers.getAllProducts)
-  .post(productsControllers.createProduct)
-  .patch(productsControllers.updateProduct)
+  .post(productsControllers.createProduct);
+
+router
+  .route("/:productId")
+  .patch(productsControllers.updateProductPrice)
   .delete(productsControllers.deleteProduct);
 
 module.exports = router;

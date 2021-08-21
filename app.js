@@ -4,7 +4,7 @@ const helmet = require("helmet");
 const logger = require("./src/lib/logger");
 const morganMiddleware = require("./src/middlewares/morgan.middleware");
 const productsRoutes = require("./src/routes/products.route");
-// const ordersRoutes = require("./src/routes/orders.route");
+const ordersRoutes = require("./src/routes/orders.route");
 const usersRoutes = require("./src/routes/users.route");
 
 const app = express();
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(helmet());
 
 app.use("/products", productsRoutes);
-// app.use("/orders", ordersRoutes);
+app.use("/orders", ordersRoutes);
 app.use("/users", usersRoutes);
 
 app.get("/", (req, res) => {

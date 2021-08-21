@@ -31,12 +31,17 @@ methods.checkMail = (userMail) => {
 };
 
 methods.getPassword = (userMail) => {
-  sequelize
-    .query("select password from biqaepposeconcu0el3n.users where mail=?", {
-      replacements: [userMail],
-      type: Sequelize.QueryTypes.SELECT,
-    })
-    .then((result) => result[0].password);
+  return new Promise((resolve, reject) => {
+    sequelize
+      .query("select password from ecommerce.users where mail=?", {
+        replacements: [userMail],
+        type: Sequelize.QueryTypes.SELECT,
+      })
+      .then((result) => resolve(result[0].password))
+      .catch((err) => {
+        reject(err);
+      });
+  });
 };
 
 methods.saveUser = (property) => {
@@ -57,16 +62,21 @@ methods.saveUser = (property) => {
 };
 
 methods.deleteUsers = () => {
-  sequelize.query("delete from biqaepposeconcu0el3n.users where id>1");
+  sequelize.query("delete from ecommerce.users where id>1");
 };
 
 methods.getId = (userMail) => {
-  sequelize
-    .query("select id from biqaepposeconcu0el3n.users where mail=?", {
-      replacements: [userMail],
-      type: Sequelize.QueryTypes.SELECT,
-    })
-    .then((result) => result[0].id);
+  return new Promise((resolve, reject) => {
+    sequelize
+      .query("select id from ecommerce.users where mail=?", {
+        replacements: [userMail],
+        type: Sequelize.QueryTypes.SELECT,
+      })
+      .then((result) => resolve(result[0].id))
+      .catch((err) => {
+        reject(err);
+      });
+  });
 };
 
 module.exports = methods;

@@ -27,8 +27,8 @@ const createProduct = (req, res) => {
       });
     })
     .catch((err) => {
-      res.status(404).json({
-        message: "Unable to save product" + err,
+      res.status(500).json({
+        message: "Unable to save product " + err,
       });
     });
 };
@@ -46,20 +46,26 @@ const getAllProducts = (req, res) => {
     });
 };
 
-const updateProduct = (req, res) => {
+const updateProductPrice = (req, res) => {
   if (!req.params.productId) {
     res.status(500).send("Please specify ProductId to update products");
   }
 
   productsModel
-    .findByIdAndUpdate(req.params.productId)
-    .then(() => {
+    .findByIdAndUpdate(req.params.productId, req.body.product)
+    .then((count) => {
+      if (!count) {
+        return res
+          .status(404)
+          .send({ error: "No Product to update or Price is same" });
+      }
+
       res.status(200).json({
         message: "Product Updated",
       });
     })
     .catch((err) => {
-      res.status(404).json({
+      res.status(500).json({
         message: "Unable to update products" + err,
       });
     });
@@ -72,14 +78,19 @@ const deleteProduct = (req, res) => {
 
   productsModel
     .removeById(req.params.productId)
-    .then(() => {
+    .then((count) => {
+      if (!count) {
+        return res.status(404).send({ error: "No Product to delete" });
+      }
+
       res.status(200).json({
         message: "Product Deleted",
       });
     })
     .catch((err) => {
-      res.status(404).json({
-        message: "Unable to delete products" + err,
+      res.status(500).json({
+        message: "Unable to delete products",
+        error: err,
       });
     });
 };
@@ -87,6 +98,6 @@ const deleteProduct = (req, res) => {
 module.exports = {
   createProduct,
   getAllProducts,
-  updateProduct,
+  updateProductPrice,
   deleteProduct,
 };

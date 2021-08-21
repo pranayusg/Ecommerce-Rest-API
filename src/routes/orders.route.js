@@ -1,12 +1,20 @@
 const express = require("express");
 const checkAuth = require("../middlewares/checkAuth.middleware");
-const covidControllers = require("../controllers/covid.controller");
+const ordersControllers = require("../controllers/orders.controller");
 
 const router = express.Router();
 
 router.all("*", checkAuth);
 
-router.get("/country/name", covidControllers.countryInQuery);
-router.get("/country/name/:name", covidControllers.countryInPath);
+router
+  .route("/")
+  .get(ordersControllers.getOrderDetails)
+  .post(ordersControllers.createOrder)
+  .delete(ordersControllers.deleteOrderDetails);
+
+router.patch(
+  "/id/:orderDetailsId/quantity/:quantity",
+  ordersControllers.updateOrderDetails
+);
 
 module.exports = router;
