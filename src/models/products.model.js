@@ -1,50 +1,37 @@
-const Sequelize = require("sequelize");
-const sequelize = require("./connection");
+const { DataTypes, QueryTypes } = require('sequelize');
+const sequelize = require('./connection');
 
 const methods = {};
 
 const productsDataModel = sequelize.define(
-  "products",
+  'products',
   {
-    id: { type: Sequelize.INTEGER, primaryKey: true },
-    name: { type: Sequelize.STRING(500) },
-    description: Sequelize.STRING(5000),
-    price: Sequelize.INTEGER,
-    cat_id: Sequelize.INTEGER,
+    // id: { type: DataTypes.INTEGER, primaryKey: true },
+    name: { type: DataTypes.STRING(500) },
+    description: DataTypes.STRING(5000),
+    price: DataTypes.INTEGER,
+    cat_id: DataTypes.INTEGER,
   },
   {
     timestamps: false,
   }
 );
 
-methods.create = (product) => {
-  return new Promise((resolve, reject) => {
+methods.saveProduct = (product) =>
+  new Promise((resolve, reject) => {
     productsDataModel
       .create(product)
-      .then(() => {
-        resolve();
+      .then((savedObj) => {
+        // delete savedObj.dataValues.id;
+        resolve(savedObj.dataValues);
       })
       .catch((err) => {
         reject(err);
       });
   });
-};
 
-// methods.getAll = () => {
-//   return new Promise((resolve, reject) => {
-//     productsDataModel
-//       .findAll()
-//       .then((results) => {
-//         resolve(results);
-//       })
-//       .catch((err) => {
-//         reject(err);
-//       });
-//   });
-// };
-
-methods.getAll = () => {
-  return new Promise((resolve, reject) => {
+methods.find = () =>
+  new Promise((resolve, reject) => {
     sequelize
       .query(
         `select P.id,P.name,P.description,P.price,C.title as category
@@ -52,7 +39,7 @@ methods.getAll = () => {
       inner join ecommerce.category C
       on P.cat_id=C.id
       order by P.id`,
-        { type: sequelize.QueryTypes.SELECT }
+        { type: QueryTypes.SELECT }
       )
       .then((results) => {
         resolve(results);
@@ -61,12 +48,11 @@ methods.getAll = () => {
         reject(err);
       });
   });
-};
 
-methods.findByIdAndUpdate = (id, product) => {
-  return new Promise((resolve, reject) => {
+methods.findByIdAndUpdate = (id, product) =>
+  new Promise((resolve, reject) => {
     productsDataModel
-      .update({ price: product.price }, { where: { id: id } })
+      .update({ price: product.price }, { where: { id } })
       .then((count) => {
         resolve(count[0]);
       })
@@ -74,12 +60,11 @@ methods.findByIdAndUpdate = (id, product) => {
         reject(err);
       });
   });
-};
 
-methods.removeById = (id) => {
-  return new Promise((resolve, reject) => {
+methods.removeById = (id) =>
+  new Promise((resolve, reject) => {
     productsDataModel
-      .destroy({ where: { id: id } })
+      .destroy({ where: { id } })
       .then((count) => {
         resolve(count);
       })
@@ -87,6 +72,5 @@ methods.removeById = (id) => {
         reject(err);
       });
   });
-};
 
 module.exports = methods;

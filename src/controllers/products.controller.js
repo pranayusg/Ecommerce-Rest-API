@@ -1,7 +1,7 @@
-const { validationResult } = require("express-validator");
-const productsModel = require("../models/products.model");
-const mailService = require("../services/mail.service");
-const logger = require("../lib/logger");
+const { validationResult } = require('express-validator');
+const productsModel = require('../models/products.model');
+const mailService = require('../services/mail.service');
+const logger = require('../lib/logger');
 
 const signUpValidationResult = validationResult.withDefaults({
   formatter: (error) => ({
@@ -13,42 +13,44 @@ const signUpValidationResult = validationResult.withDefaults({
 
 const createProduct = (req, res) => {
   if (!req.body.product) {
-    res.status(500).send("Please specify the product details");
+    res.status(400).send('Please specify the product details');
   }
 
-  const product = req.body.product;
+  res.locals.product = req.body.product;
 
   productsModel
-    .create(product)
-    .then(() => {
-      res.status(200).json({
-        message: "Product Saved",
-        product: product,
+    .saveProduct(res.locals.product)
+    .then((savedProduct) => {
+      res.status(201).json({
+        message: 'Product Saved',
+        product: savedProduct,
       });
     })
     .catch((err) => {
       res.status(500).json({
-        message: "Unable to save product " + err,
+        message: 'Unable to save product ',
+        err,
       });
     });
 };
 
 const getAllProducts = (req, res) => {
   productsModel
-    .getAll()
+    .find()
     .then((products) => {
       res.status(200).json(products);
     })
     .catch((err) => {
-      res.status(404).json({
-        message: "Unable to retrieve products" + err,
+      res.status(500).json({
+        message: 'Unable to retrieve products',
+        err,
       });
     });
 };
 
 const updateProductPrice = (req, res) => {
   if (!req.params.productId) {
-    res.status(500).send("Please specify ProductId to update products");
+    res.status(400).send('Please specify ProductId to update products');
   }
 
   productsModel
@@ -57,39 +59,40 @@ const updateProductPrice = (req, res) => {
       if (!count) {
         return res
           .status(404)
-          .send({ error: "No Product to update or Price is same" });
+          .send({ message: 'No Product to update or Price is same' });
       }
 
-      res.status(200).json({
-        message: "Product Updated",
+      res.status(201).json({
+        message: 'Product Updated',
       });
     })
     .catch((err) => {
       res.status(500).json({
-        message: "Unable to update products" + err,
+        message: 'Unable to update products',
+        err,
       });
     });
 };
 
 const deleteProduct = (req, res) => {
   if (!req.params.productId) {
-    res.status(500).send("Please specify ProductId to delete products");
+    res.status(400).send('Please specify ProductId to delete products');
   }
 
   productsModel
     .removeById(req.params.productId)
     .then((count) => {
       if (!count) {
-        return res.status(404).send({ error: "No Product to delete" });
+        return res.status(404).send({ message: 'No Product to delete' });
       }
 
       res.status(200).json({
-        message: "Product Deleted",
+        message: 'Product Deleted',
       });
     })
     .catch((err) => {
       res.status(500).json({
-        message: "Unable to delete products",
+        message: 'Unable to delete products',
         error: err,
       });
     });

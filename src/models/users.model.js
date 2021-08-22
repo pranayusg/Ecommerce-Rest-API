@@ -1,20 +1,20 @@
-const Sequelize = require("sequelize");
-const sequelize = require("./connection");
+const Sequelize = require('sequelize');
+const sequelize = require('./connection');
 
 const methods = {};
 
 const userDataModel = sequelize.define(
-  "users",
+  'users',
   {
     mail: { type: Sequelize.STRING(45) },
     password: Sequelize.STRING(200),
     id: { type: Sequelize.INTEGER, primaryKey: true },
   },
-  { timestamps: false, charset: "utf-8" }
+  { timestamps: false, charset: 'utf-8' }
 );
 
-methods.checkMail = (userMail) => {
-  return new Promise((resolve, reject) => {
+methods.checkMail = (userMail) =>
+  new Promise((resolve, reject) => {
     userDataModel
       .findOne({
         where: {
@@ -25,15 +25,14 @@ methods.checkMail = (userMail) => {
         resolve(result);
       })
       .catch((err) => {
-        reject();
+        reject(err);
       });
   });
-};
 
-methods.getPassword = (userMail) => {
-  return new Promise((resolve, reject) => {
+methods.getPassword = (userMail) =>
+  new Promise((resolve, reject) => {
     sequelize
-      .query("select password from ecommerce.users where mail=?", {
+      .query('select password from ecommerce.users where mail=?', {
         replacements: [userMail],
         type: Sequelize.QueryTypes.SELECT,
       })
@@ -42,11 +41,9 @@ methods.getPassword = (userMail) => {
         reject(err);
       });
   });
-};
 
-methods.saveUser = (property) => {
-  return new Promise((resolve, reject) => {
-    console.log(property);
+methods.saveUser = (property) =>
+  new Promise((resolve, reject) => {
     userDataModel
       .upsert({
         mail: property.mail,
@@ -59,16 +56,15 @@ methods.saveUser = (property) => {
         reject(err);
       });
   });
-};
 
 methods.deleteUsers = () => {
-  sequelize.query("delete from ecommerce.users where id>1");
+  sequelize.query('delete from ecommerce.users where id>1');
 };
 
-methods.getId = (userMail) => {
-  return new Promise((resolve, reject) => {
+methods.getId = (userMail) =>
+  new Promise((resolve, reject) => {
     sequelize
-      .query("select id from ecommerce.users where mail=?", {
+      .query('select id from ecommerce.users where mail=?', {
         replacements: [userMail],
         type: Sequelize.QueryTypes.SELECT,
       })
@@ -77,6 +73,5 @@ methods.getId = (userMail) => {
         reject(err);
       });
   });
-};
 
 module.exports = methods;

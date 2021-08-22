@@ -11,7 +11,7 @@ const sequelize = new Sequelize(
     dialect: process.env.DIALECT,
     port: process.env.DB_PORT,
     logging: false,
-    pool: { maxConnections: 5, maxIdleTime: 30 },
+    // pool: { maxConnections: 5, maxIdleTime: 30 },
   }
 );
 
@@ -21,7 +21,7 @@ sequelize
     logger.debug('Connection has been established successfully.');
   })
   .catch((err) => {
-    logger.error('Unable to connect to the database:', err);
+    logger.error('Unable to connect to the database: ', err);
   });
 
 module.exports = sequelize;

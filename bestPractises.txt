@@ -1,0 +1,179 @@
+Project structure
+Input Validation (Express validator)
+dotenv Environment variables
+loggers
+Testing
+Middleware (res.locals)
+controlling rate of reqs (SS on mobile)
+eslint  
+
+compression npm
+Error handling next
+sent files through public folder images
+
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+
+https://miickeyreyez.medium.com/creating-a-node-js-app-with-express-32130a47bedc
+https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/production/assigntransactionid.md
+
+✔ 6.2. Limit concurrent requests using a middleware
+Validate incoming JSON schemas
+
+https://github.com/goldbergyoni/nodebestpractices
+
+https://github.com/hagopj13/node-express-boilerplate
+https://dev.to/juliest88/how-to-build-rest-api-with-nodejs-express-and-mysql-31jk
+
+Readme From
+https://github.com/borisding/avenue-express
+
+https://github.com/rafaelcalhau/boilerplate-nodejs-mysql/blob/master/package.json
+
+Build API
+
+https://sematext.com/blog/node-js-logging/#toc-logging-in-different-environments-1
+
+https://medium.com/codechef-vit/a-better-project-structure-with-express-and-node-js-c23abc2d736f
+
+
+Testing Jest
+https://levelup.gitconnected.com/building-an-express-api-with-sequelize-cli-and-unit-testing-882c6875ed59
+https://www.testim.io/blog/unit-test-rest-api/
+
+What to Test in Unit Testing
+A unit test could assert that a method:
+
+Returns an expected value
+Throws an exception under the tested condition
+Changes the state of the system
+Calls another function
+
+Integration testing, it’s important that you verify:
+
+The HTTP status code
+The response payload
+The response headers
+The API performance/response time
+
+Winston and morgan
+https://levelup.gitconnected.com/better-logs-for-expressjs-using-winston-and-morgan-with-typescript-1c31c1ab9342
+A transport is essentially a storage device for your logs.
+
+Morgan and winston Color issue
+https://github.com/winstonjs/winston-mongodb/issues/162
+
+Request rate limiter in express and redis
+https://www.section.io/engineering-education/nodejs-rate-limiting/
+
+ESLINT and Preetier
+https://sourcelevel.io/blog/how-to-setup-eslint-and-prettier-on-node
+
+Debugging nodejs
+https://medium.com/the-node-js-collection/debugging-node-js-with-google-chrome-4965b5f910f4
+
+API validation
+https://www.apisyouwonthate.com/blog/server-side-validation-with-api-descriptions
+https://www.positronx.io/express-validator-tutorial-with-input-validation-examples/#tc_7025_05
+https://www.freecodecamp.org/news/how-to-make-input-validation-simple-and-clean-in-your-express-js-app-ea9b5ff5a8a7/
+
+SEQUELIZE
+
+https://maximorlov.com/6-common-sequelize-queries-rewritten-in-sql/
+https://sequelize.org/master/variable/index.html#static-variable-DataTypes
+Sequelise UPdate dynamic queries
+https://www.tabnine.com/code/javascript/functions/sequelize/QueryTypes/UPDATE
+DataTypes.DECIMAL(10,2)
+
+RAW queries
+C insertedId[0];   Returns id of inserted record
+R Select query
+U updateCount[1];  Returns counts of changed records
+D Returns nothing
+
+Model queries
+C savedObj.dataValues
+R Select query
+U count[0]
+D count
+
+ htmlDataModelCH = sequelize.define('htmldata', {
+        originalid: { type: Sequelize.STRING(20) },
+        source: { type: Sequelize.STRING(20) },
+        url: Sequelize.STRING(2000),
+        html: Sequelize.TEXT,
+        createdon: Sequelize.DATE(),
+        isprocessed: { type: Sequelize.BOOLEAN, defaultValue: 0 },
+        imageprocessed: { type: Sequelize.BOOLEAN, defaultValue: 0 },
+        fulldescription: Sequelize.TEXT,
+        adType: Sequelize.INTEGER,
+        id: { type: Sequelize.BIGINT, primaryKey: true }
+    }, { timestamps: false, charset: 'utf-8' });
+
+Shopping Cart
+https://www.youtube.com/watch?v=PhzoniE4pw4&list=PLsjmv9aDmNDAN5adZxbGTlQHlgU2je7KE&index=3
+https://github.com/costaivo/Tutorial-NodeJS
+https://github.com/rsinghal26/shopping-cart-RESTful-api#d-delete-a-particular-order
+
+MYSQL naming conventions
+https://anandarajpandey.com/2015/05/10/mysql-naming-coding-conventions-tips-on-mysql-database/
+
+AutoIncrement
+https://dev.mysql.com/doc/refman/5.6/en/replication-options-source.html#sysvar_auto_increment_offset
+
+Add UNIQUE Index
+ALTER TABLE ecommerce.order_details ADD UNIQUE product_id, order_id_unique_index (product_id, order_id);
+
+Default formatter
+Format on save 
+
+"url" : "https://sample-nodejs-rest-api.herokuapp.com"
+
+
+STATUSCODES
+{
+  "100": "(Informational) — Server acknowledges a request",
+  "200": "(Success) — Server completed the request as expected",
+  "201 Created": "The request has succeeded and a new resource has been created as a result. 
+				This is typically the response sent after POST requests, or some PUT requests.",
+  "204 No Content":"There is no content to send for this request", 
+  "300": "(Redirection) — Client needs to perform further actions to complete the request",
+  "400": "Bad Request — Client sent an invalid request — such as lacking required request body or parameter",
+  "401": "Unauthorized — Client failed to authenticate with the server",
+  "403": "Forbidden — Client authenticated but does not have permission to access the requested resource",
+  "404": "Not Found — The requested resource does not exist",
+  "412": "Precondition Failed — One or more conditions in the request header fields evaluated to false",
+  "422": "The client should not repeat this request without modification.",
+  "500": "Internal Server Error — Server failed to fulfill a valid request due to an error with server",
+  "503": "Service Unavailable — The requested service is not available",
+  "1xx": "Informational – Communicates transfer protocol-level information.",
+  "2xx": "Success – Indicates that the client’s request was accepted successfully. ",
+  "3xx": "Redirection – Indicates that the client must take some additional action in order to complete their request.",
+  "4xx": "Client Error – This category of error status codes points the finger at clients. ",
+  "5xx": "Server Error – The server takes responsibility for these error status codes."
+}
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+
+NAMING CONVENTIONS
+
+Controller
+
+getTasks
+getTaskById
+getTasksAssignedToUser
+getTasksAssignedToUserWithStatus
+createTask
+updateTask
+deleteTaskById
+
+
+Models
+
+Task.find
+Task.create
+findByIdAndUpdate
+removeById
+
+npm i winston sequelize sendmail nodemailer mysql2 morgan jsonwebtoken helmet express-validator  express dotenv bcrypt
+npm i prettier cross-env eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-jest eslint-plugin-import supertest jest --save-dev
+npx eslint --init

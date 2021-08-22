@@ -1,18 +1,18 @@
-const express = require("express");
-const productsControllers = require("../controllers/products.controller");
-const checkAuth = require("../middlewares/checkAuth.middleware");
+const express = require('express');
+const productsControllers = require('../controllers/products.controller');
+const checkAuth = require('../middlewares/checkAuth.middleware');
 
 const router = express.Router();
 
-router.all("*", checkAuth);
+router.all('*', checkAuth);
 
 router
-  .route("/")
+  .route('/')
   .get(productsControllers.getAllProducts)
   .post(productsControllers.createProduct);
 
 router
-  .route("/:productId")
+  .route('/:productId')
   .patch(productsControllers.updateProductPrice)
   .delete(productsControllers.deleteProduct);
 

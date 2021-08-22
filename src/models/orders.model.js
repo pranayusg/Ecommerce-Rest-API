@@ -1,9 +1,9 @@
-const sequelize = require("./connection");
+const sequelize = require('./connection');
 
 const methods = {};
 
-methods.getAllOrderDetails = () => {
-  return new Promise((resolve, reject) => {
+methods.findOrderDetailsByMail = (mail) =>
+  new Promise((resolve, reject) => {
     sequelize
       .query(
         `select OD.id,P.name,P.description,C.title as category,OD.quantity,P.price
@@ -12,8 +12,9 @@ methods.getAllOrderDetails = () => {
         inner join ecommerce.users U on O.user_id=U.id
         inner join ecommerce.products P on P.id=OD.product_id
         inner join ecommerce.category C on C.id=P.cat_id
+        where U.mail=?
         order by OD.id;`,
-        { type: sequelize.QueryTypes.SELECT }
+        { replacements: [mail], type: sequelize.QueryTypes.SELECT }
       )
       .then((results) => {
         resolve(results);
@@ -22,10 +23,9 @@ methods.getAllOrderDetails = () => {
         reject(err);
       });
   });
-};
 
-methods.idExists = (userId) => {
-  return new Promise((resolve, reject) => {
+methods.idExists = (userId) =>
+  new Promise((resolve, reject) => {
     sequelize
       .query(`SELECT id FROM ecommerce.orders where user_id=?;`, {
         replacements: [userId],
@@ -38,10 +38,9 @@ methods.idExists = (userId) => {
         reject(err);
       });
   });
-};
 
-methods.saveOrder = (userId) => {
-  return new Promise((resolve, reject) => {
+methods.saveOrder = (userId) =>
+  new Promise((resolve, reject) => {
     sequelize
       .query(`INSERT INTO ecommerce.orders(user_id) VALUES (?);`, {
         replacements: [userId],
@@ -54,10 +53,9 @@ methods.saveOrder = (userId) => {
         reject(err);
       });
   });
-};
 
-methods.saveOrderDetails = (orderId, orderDetails) => {
-  return new Promise((resolve, reject) => {
+methods.saveOrderDetails = (orderId, orderDetails) =>
+  new Promise((resolve, reject) => {
     sequelize
       .query(
         `INSERT INTO ecommerce.order_details(order_id,product_id,quantity)VALUES(?,?,?);`,
@@ -70,6 +68,36 @@ methods.saveOrderDetails = (orderId, orderDetails) => {
           type: sequelize.QueryTypes.INSERT,
         }
       )
+      .then((insertedId) => {
+        resolve(insertedId[0]);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+
+methods.findByIdAndUpdate = (id, quantity) =>
+  new Promise((resolve, reject) => {
+    sequelize
+      .query(`update ecommerce.order_details set quantity=? where id=?`, {
+        replacements: [quantity, id],
+        type: sequelize.QueryTypes.UPDATE,
+      })
+      .then((updateCount) => {
+        resolve(updateCount[1]);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+
+methods.findByIdAndDelete = (id) =>
+  new Promise((resolve, reject) => {
+    sequelize
+      .query(`delete from ecommerce.order_details where id=?`, {
+        replacements: [id],
+        type: sequelize.QueryTypes.DELETE,
+      })
       .then(() => {
         resolve();
       })
@@ -77,39 +105,5 @@ methods.saveOrderDetails = (orderId, orderDetails) => {
         reject(err);
       });
   });
-};
-
-methods.findByIdAndUpdate = (id, quantity) => {
-  return new Promise((resolve, reject) => {
-    sequelize
-      .query(`update ecommerce.order_details set quantity=? where id=?`, {
-        replacements: [quantity, id],
-        type: sequelize.QueryTypes.UPDATE,
-      })
-      .then((results) => {
-        resolve(results[1]);
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
-};
-
-methods.findByIdAndDelete = (id) => {
-  return new Promise((resolve, reject) => {
-    sequelize
-      .query(`delete from ecommerce.order_details where id=?`, {
-        replacements: [id],
-        type: sequelize.QueryTypes.DELETE,
-      })
-      .then((results) => {
-        console.log(results);
-        resolve();
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
-};
 
 module.exports = methods;
