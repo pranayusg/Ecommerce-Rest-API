@@ -511,3 +511,225 @@
 2021-08-22 22:19:59 http: GET /products 200 63.640 ms - 746
 2021-08-22 22:20:48 debug: Server started and running on port : 3000
 2021-08-22 22:20:48 debug: Connection has been established successfully.
+2021-08-23 19:28:22 debug: Server started and running on port : 3000
+2021-08-23 19:28:23 debug: Connection has been established successfully.
+2021-08-23 20:50:46 debug: Server started and running on port : 3000
+2021-08-23 20:50:46 debug: Connection has been established successfully.
+2021-08-23 21:54:59 debug: Server started and running on port : 3000
+2021-08-23 21:54:59 debug: Connection has been established successfully.
+2021-08-23 22:10:04 debug: Server started and running on port : 3000
+2021-08-23 22:10:04 debug: Connection has been established successfully.
+2021-08-23 22:10:09 debug: Server started and running on port : 3000
+2021-08-23 22:10:09 debug: Connection has been established successfully.
+2021-08-23 22:11:32 debug: Server started and running on port : 3000
+2021-08-23 22:11:32 debug: Connection has been established successfully.
+2021-08-23 22:12:10 debug: Server started and running on port : 3000
+2021-08-23 22:12:10 debug: Connection has been established successfully.
+2021-08-23 22:13:05 debug: Server started and running on port : 3000
+2021-08-23 22:13:05 debug: Connection has been established successfully.
+2021-08-23 22:15:06 debug: Server started and running on port : 3000
+2021-08-23 22:15:06 debug: Connection has been established successfully.
+2021-08-23 22:16:43 debug: Server started and running on port : 3000
+2021-08-23 22:16:43 debug: Connection has been established successfully.
+2021-08-23 22:16:55 debug: Server started and running on port : 3000
+2021-08-23 22:16:55 debug: Connection has been established successfully.
+2021-08-23 22:21:09 debug: Server started and running on port : 3000
+2021-08-23 22:21:09 debug: Connection has been established successfully.
+2021-08-23 22:21:25 debug: Server started and running on port : 3000
+2021-08-23 22:21:25 debug: Connection has been established successfully.
+2021-08-23 22:21:36 http: POST /users/signup 404 144.588 ms - 38
+2021-08-23 22:21:52 http: POST /users/signup 400 2.296 ms - 69
+2021-08-23 22:22:47 debug: Server started and running on port : 3000
+2021-08-23 22:22:47 debug: Connection has been established successfully.
+2021-08-23 22:27:06 debug: Server started and running on port : 3000
+2021-08-23 22:27:06 debug: Connection has been established successfully.
+2021-08-23 22:27:14 error: Didnt match any case in input validator
+2021-08-23 22:27:14 error: Error message: res.locals.validation is not a function,Req details: /users/signup - POST - ::1
+2021-08-23 22:27:14 http: POST /users/signup 500 22.408 ms - 53
+2021-08-23 22:27:34 debug: Server started and running on port : 3000
+2021-08-23 22:27:34 debug: Connection has been established successfully.
+2021-08-23 22:27:38 http: POST /users/signup 400 21.034 ms - 80
+2021-08-23 22:27:51 http: POST /users/signup 400 2.646 ms - 83
+2021-08-23 22:28:34 debug: Server started and running on port : 3000
+2021-08-23 22:28:34 debug: Connection has been established successfully.
+2021-08-23 22:28:37 debug: Server started and running on port : 3000
+2021-08-23 22:28:37 debug: Connection has been established successfully.
+2021-08-23 22:30:45 debug: Server started and running on port : 3000
+2021-08-23 22:30:45 debug: Connection has been established successfully.
+2021-08-23 22:30:49 http: POST /users/signup 400 20.576 ms - 58
+2021-08-23 22:30:57 debug: Server started and running on port : 3000
+2021-08-23 22:30:57 debug: Connection has been established successfully.
+2021-08-23 22:30:57 http: POST /users/signup 400 21.329 ms - 72
+2021-08-23 22:31:44 debug: Server started and running on port : 3000
+2021-08-23 22:31:44 debug: Connection has been established successfully.
+2021-08-23 22:32:01 debug: Server started and running on port : 3000
+2021-08-23 22:32:01 debug: Connection has been established successfully.
+2021-08-23 22:32:05 http: POST /users/signup 400 20.833 ms - 83
+2021-08-23 22:32:38 debug: Server started and running on port : 3000
+2021-08-23 22:32:38 debug: Connection has been established successfully.
+2021-08-23 22:32:44 http: POST /users/signup 400 22.726 ms - 83
+2021-08-23 22:36:45 debug: Server started and running on port : 3000
+2021-08-23 22:36:45 debug: Connection has been established successfully.
+2021-08-23 22:36:55 debug: Server started and running on port : 3000
+2021-08-23 22:36:55 debug: Connection has been established successfully.
+2021-08-23 22:37:00 http: POST /users/signup 400 20.888 ms - 83
+2021-08-23 22:37:29 debug: Server started and running on port : 3000
+2021-08-23 22:37:29 debug: Connection has been established successfully.
+2021-08-23 22:37:52 debug: Server started and running on port : 3000
+2021-08-23 22:37:52 debug: Connection has been established successfully.
+2021-08-23 22:39:30 debug: Server started and running on port : 3000
+2021-08-23 22:39:31 debug: Connection has been established successfully.
+2021-08-23 22:39:31 http: POST /users/signup 400 22.012 ms - 83
+2021-08-23 22:39:40 debug: Server started and running on port : 3000
+2021-08-23 22:39:40 debug: Connection has been established successfully.
+2021-08-23 22:39:44 http: POST /users/signup 400 22.114 ms - 83
+2021-08-23 22:39:55 debug: Server started and running on port : 3000
+2021-08-23 22:39:55 debug: Connection has been established successfully.
+2021-08-23 22:40:01 debug: Server started and running on port : 3000
+2021-08-23 22:40:01 debug: Connection has been established successfully.
+2021-08-23 22:40:52 http: POST /users/signin 200 130.558 ms - 262
+2021-08-23 22:40:57 http: POST /users/signin 422 4.126 ms - 32
+2021-08-23 22:41:01 http: POST /users/signin 422 2.990 ms - 32
+2021-08-23 22:41:04 http: POST /users/signin 422 2.856 ms - 32
+2021-08-23 22:41:14 http: POST /users/signin 200 80.891 ms - 262
+2021-08-23 22:41:44 debug: Auth Success /products - GET - ::1
+2021-08-23 22:41:44 http: GET /products 200 58.048 ms - 746
+2021-08-23 22:42:31 debug: Server started and running on port : 3000
+2021-08-23 22:42:31 debug: Connection has been established successfully.
+2021-08-23 22:42:43 debug: Server started and running on port : 3000
+2021-08-23 22:42:43 debug: Connection has been established successfully.
+2021-08-23 22:43:08 debug: Server started and running on port : 3000
+2021-08-23 22:43:08 debug: Connection has been established successfully.
+2021-08-23 22:43:30 debug: Server started and running on port : 3000
+2021-08-23 22:43:30 debug: Connection has been established successfully.
+2021-08-23 22:45:31 debug: Server started and running on port : 3000
+2021-08-23 22:45:31 debug: Connection has been established successfully.
+2021-08-23 22:45:45 debug: Server started and running on port : 3000
+2021-08-23 22:45:45 debug: Connection has been established successfully.
+2021-08-23 22:48:05 debug: Server started and running on port : 3000
+2021-08-23 22:48:05 debug: Connection has been established successfully.
+2021-08-23 22:48:51 debug: Server started and running on port : 3000
+2021-08-23 22:48:51 debug: Connection has been established successfully.
+2021-08-23 22:49:01 error: Auth failed /products - POST - ::1 - /
+2021-08-23 22:49:01 http: POST /products 401 22.265 ms - 25
+2021-08-23 22:49:09 debug: Auth Success /products - POST - ::1
+2021-08-23 22:49:09 http: POST /products 400 2.544 ms - 34
+2021-08-23 22:49:53 debug: Server started and running on port : 3000
+2021-08-23 22:49:53 debug: Connection has been established successfully.
+2021-08-23 22:49:56 debug: Auth Success /products - POST - ::1
+2021-08-23 22:49:56 http: POST /products 400 19.755 ms - 34
+2021-08-23 22:50:29 debug: Server started and running on port : 3000
+2021-08-23 22:50:30 debug: Connection has been established successfully.
+2021-08-23 22:50:33 debug: Auth Success /products - POST - ::1
+2021-08-23 22:50:33 http: POST /products 400 23.478 ms - 81
+2021-08-23 22:59:13 debug: Server started and running on port : 3000
+2021-08-23 22:59:13 debug: Connection has been established successfully.
+2021-08-23 23:00:33 debug: Server started and running on port : 3000
+2021-08-23 23:00:33 debug: Connection has been established successfully.
+2021-08-23 23:00:49 debug: Server started and running on port : 3000
+2021-08-23 23:00:49 debug: Connection has been established successfully.
+2021-08-23 23:01:25 debug: Server started and running on port : 3000
+2021-08-23 23:01:25 debug: Connection has been established successfully.
+2021-08-23 23:01:29 debug: Auth Success /products/11 - PATCH - ::1
+2021-08-23 23:01:29 http: PATCH /products/11 201 80.005 ms - 29
+2021-08-23 23:01:34 debug: Auth Success /products/11 - PATCH - ::1
+2021-08-23 23:01:34 http: PATCH /products/11 404 16.213 ms - 51
+2021-08-23 23:01:58 debug: Server started and running on port : 3000
+2021-08-23 23:01:58 debug: Connection has been established successfully.
+2021-08-23 23:02:05 debug: Server started and running on port : 3000
+2021-08-23 23:02:05 debug: Connection has been established successfully.
+2021-08-23 23:02:07 debug: Auth Success /products/11 - PATCH - ::1
+2021-08-23 23:02:07 http: PATCH /products/11 400 24.208 ms - 86
+2021-08-23 23:02:24 debug: Server started and running on port : 3000
+2021-08-23 23:02:24 debug: Connection has been established successfully.
+2021-08-23 23:02:25 debug: Auth Success /products/11 - PATCH - ::1
+2021-08-23 23:02:25 http: PATCH /products/11 400 24.447 ms - 93
+2021-08-23 23:02:42 debug: Server started and running on port : 3000
+2021-08-23 23:02:42 debug: Connection has been established successfully.
+2021-08-23 23:02:44 debug: Auth Success /products/11 - PATCH - ::1
+2021-08-23 23:02:44 http: PATCH /products/11 404 26.615 ms - 51
+2021-08-23 23:03:34 debug: Server started and running on port : 3000
+2021-08-23 23:03:34 debug: Connection has been established successfully.
+2021-08-23 23:04:20 debug: Server started and running on port : 3000
+2021-08-23 23:04:20 debug: Connection has been established successfully.
+2021-08-23 23:04:32 debug: Server started and running on port : 3000
+2021-08-23 23:04:32 debug: Connection has been established successfully.
+2021-08-23 23:04:34 debug: Auth Success /products/11 - PATCH - ::1
+2021-08-23 23:04:34 http: PATCH /products/11 400 24.866 ms - 244
+2021-08-23 23:05:00 debug: Auth Success /products/11 - PATCH - ::1
+2021-08-23 23:05:00 http: PATCH /products/11 400 4.010 ms - 130
+2021-08-23 23:07:52 debug: Server started and running on port : 3000
+2021-08-23 23:07:52 debug: Connection has been established successfully.
+2021-08-23 23:12:12 debug: Server started and running on port : 3000
+2021-08-23 23:12:12 debug: Connection has been established successfully.
+2021-08-23 23:12:39 debug: Auth Success /products/11 - PATCH - ::1
+2021-08-23 23:12:39 http: PATCH /products/11 400 26.563 ms - 130
+2021-08-23 23:13:10 debug: Server started and running on port : 3000
+2021-08-23 23:13:10 debug: Connection has been established successfully.
+2021-08-23 23:18:25 debug: Server started and running on port : 3000
+2021-08-23 23:18:25 debug: Connection has been established successfully.
+2021-08-23 23:26:05 http: POST /users/signup 400 28.555 ms - 96
+2021-08-23 23:26:13 http: POST /users/signup 404 113.007 ms - 38
+2021-08-23 23:26:17 http: POST /users/signup 400 2.286 ms - 96
+2021-08-23 23:26:28 http: POST /users/signup 404 81.978 ms - 38
+2021-08-23 23:26:59 http: POST /users/signup 400 1.461 ms - 96
+2021-08-23 23:27:09 debug: Server started and running on port : 3000
+2021-08-23 23:27:10 debug: Connection has been established successfully.
+2021-08-23 23:27:12 http: POST /users/signup 400 26.166 ms - 96
+2021-08-23 23:27:22 debug: Server started and running on port : 3000
+2021-08-23 23:27:22 debug: Connection has been established successfully.
+2021-08-23 23:27:23 http: POST /users/signup 404 132.644 ms - 38
+2021-08-23 23:27:44 debug: Server started and running on port : 3000
+2021-08-23 23:27:44 debug: Connection has been established successfully.
+2021-08-23 23:27:45 http: POST /users/signup 400 24.780 ms - 96
+2021-08-23 23:28:34 debug: Server started and running on port : 3000
+2021-08-23 23:28:34 debug: Connection has been established successfully.
+2021-08-23 23:28:41 http: POST /users/signup 404 120.760 ms - 38
+2021-08-23 23:33:46 debug: Server started and running on port : 3000
+2021-08-23 23:33:46 debug: Connection has been established successfully.
+2021-08-23 23:34:39 debug: Server started and running on port : 3000
+2021-08-23 23:34:39 debug: Connection has been established successfully.
+2021-08-23 23:41:50 debug: Server started and running on port : 3000
+2021-08-23 23:41:50 debug: Connection has been established successfully.
+2021-08-23 23:41:59 debug: Auth Success /products - POST - ::1
+2021-08-23 23:41:59 http: POST /products 400 29.417 ms - 243
+2021-08-23 23:42:29 debug: Auth Success /products - POST - ::1
+2021-08-23 23:42:29 http: POST /products 400 3.503 ms - 264
+2021-08-23 23:43:43 debug: Server started and running on port : 3000
+2021-08-23 23:43:43 debug: Connection has been established successfully.
+2021-08-23 23:43:49 debug: Server started and running on port : 3000
+2021-08-23 23:43:49 debug: Connection has been established successfully.
+2021-08-23 23:43:59 debug: Auth Success /products - POST - ::1
+2021-08-23 23:43:59 http: POST /products 400 28.419 ms - 186
+2021-08-23 23:44:14 debug: Auth Success /products - POST - ::1
+2021-08-23 23:44:14 http: POST /products 500 111.313 ms - 1330
+2021-08-23 23:48:09 debug: Server started and running on port : 3000
+2021-08-23 23:48:09 debug: Connection has been established successfully.
+2021-08-23 23:48:15 debug: Auth Success /products - POST - ::1
+2021-08-23 23:48:15 http: POST /products 500 129.260 ms - 1330
+2021-08-23 23:48:32 debug: Server started and running on port : 3000
+2021-08-23 23:48:32 debug: Connection has been established successfully.
+2021-08-23 23:48:33 debug: Auth Success /products - POST - ::1
+2021-08-23 23:48:33 http: POST /products 400 24.501 ms - 105
+2021-08-23 23:48:45 debug: Server started and running on port : 3000
+2021-08-23 23:48:45 debug: Connection has been established successfully.
+2021-08-23 23:48:46 debug: Auth Success /products - POST - ::1
+2021-08-23 23:48:46 http: POST /products 400 25.341 ms - 105
+2021-08-23 23:57:05 debug: Server started and running on port : 3000
+2021-08-23 23:57:05 debug: Connection has been established successfully.
+2021-08-23 23:58:02 debug: Server started and running on port : 3000
+2021-08-23 23:58:02 debug: Connection has been established successfully.
+2021-08-23 23:58:19 debug: Auth Success /products - POST - ::1
+2021-08-23 23:58:19 http: POST /products 400 25.017 ms - 92
+2021-08-23 23:58:41 debug: Server started and running on port : 3000
+2021-08-23 23:58:41 debug: Connection has been established successfully.
+2021-08-23 23:58:49 debug: Auth Success /products - POST - ::1
+2021-08-23 23:58:49 http: POST /products 400 24.756 ms - 93
+2021-08-23 23:58:56 debug: Auth Success /products - POST - ::1
+2021-08-23 23:58:56 http: POST /products 400 4.000 ms - 34
+2021-08-23 23:59:09 debug: Auth Success /products - POST - ::1
+2021-08-23 23:59:09 http: POST /products 400 2.880 ms - 93
+2021-08-23 23:59:23 debug: Auth Success /products - POST - ::1
+2021-08-23 23:59:23 http: POST /products 400 2.502 ms - 93
+2021-08-24 00:00:04 debug: Server started and running on port : 3000
+2021-08-24 00:00:04 debug: Connection has been established successfully.

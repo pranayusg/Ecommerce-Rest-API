@@ -1,24 +1,15 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const { validationResult } = require('express-validator');
 const usersModel = require('../models/users.model');
 const logger = require('../lib/logger');
 const mailService = require('../services/mail.service');
 
-const signUpValidationResult = validationResult.withDefaults({
-  formatter: (error) => ({
-    msg: error.msg,
-    param: error.param,
-    location: error.location,
-  }),
-});
-
 const signup = (req, res, next) => {
-  const errors = signUpValidationResult(req).array();
+  // const errors = signUpValidationResult(req).array();
 
-  if (errors.length > 0) {
-    return res.status(400).json({ errors });
-  }
+  // if (errors.length > 0) {
+  //   return res.status(400).json({ errors });
+  // }
 
   bcrypt.hash(
     req.body.password,

@@ -27,3 +27,6 @@
 2021-08-22 18:56:45 error: Auth failed /orders - GET - ::1 - /
 2021-08-22 19:04:17 error: Auth failed /orders - POST - ::1 - /
 2021-08-22 19:27:41 error: Auth failed /orders?id=12 - DELETE - ::1 - /
+2021-08-23 22:27:14 error: Didnt match any case in input validator
+2021-08-23 22:27:14 error: Error message: res.locals.validation is not a function,Req details: /users/signup - POST - ::1
+2021-08-23 22:49:01 error: Auth failed /products - POST - ::1 - /

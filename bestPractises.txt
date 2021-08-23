@@ -75,6 +75,11 @@ API validation
 https://www.apisyouwonthate.com/blog/server-side-validation-with-api-descriptions
 https://www.positronx.io/express-validator-tutorial-with-input-validation-examples/#tc_7025_05
 https://www.freecodecamp.org/news/how-to-make-input-validation-simple-and-clean-in-your-express-js-app-ea9b5ff5a8a7/
+https://express-validator.github.io/docs/validation-chain-api.html
+ 
+Validation methods
+https://flaviocopes.com/express-validate-input/ 
+https://github.com/validatorjs/validator.js#validators
 
 SEQUELIZE
 
@@ -177,3 +182,6 @@ removeById
 npm i winston sequelize sendmail nodemailer mysql2 morgan jsonwebtoken helmet express-validator  express dotenv bcrypt
 npm i prettier cross-env eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-jest eslint-plugin-import supertest jest --save-dev
 npx eslint --init
+
+TEMPLATE ENGINE
+https://expressjs.com/en/guide/using-template-engines.html
