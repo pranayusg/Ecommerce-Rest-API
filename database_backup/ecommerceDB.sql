@@ -153,6 +153,14 @@ LOCK TABLES `users` WRITE;
 INSERT INTO `users` VALUES (5,'test@gmail.com','$2b$10$nuMNsTd0ZkbXhl6c9PqdXerJ3koQRXS7e7weP9V/o4TCJbC./GdNi'),(6,'test1@gmail.com','$2b$10$dg/FlGd04oNu//GESAqfaeM7POCT6n7CDlKr5n2wNC5FYmq4arSrK'),(7,'test2@gmail.com','$2b$10$VaXzWg4QRGdRYlrkATP5b.LBowNmzZiC9ZcwnJtArUoEoPKTfltLK'),(8,'gates@gmail.com','$2b$10$8N96xONCR2o7eHU8cVg1vu5j7/ZtIrLfaaWuMYeIooob90cGgqs/O');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'ecommerce'
+--
+
+--
+-- Dumping routines for database 'ecommerce'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -163,4 +171,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-24  1:37:29
+-- Dump completed on 2021-08-31 12:45:41

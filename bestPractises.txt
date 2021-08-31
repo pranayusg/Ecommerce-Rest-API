@@ -133,6 +133,13 @@ Format on save
 
 "url" : "https://sample-nodejs-rest-api.herokuapp.com"
 
+Converting an E-R DIAGRAM into TABLE with Example || DBMS || in Hindi
+https://www.percona.com/blog/2014/02/10/generating-test-data-mysql-tables/
+http://generatedata.com/
+CURRENT_TIMESTAMP
+CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+FK_premise_member_renterId_memberId
 
 STATUSCODES
 {
@@ -159,7 +166,7 @@ STATUSCODES
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 
-NAMING CONVENTIONS
+NAMING CONVENTIONS 
 
 Controller
 
@@ -179,9 +186,27 @@ Task.create
 findByIdAndUpdate
 removeById
 
+POSTMAN
+https://blog.postman.com/api-testing-tips-from-a-postman-professional/
+
 npm i winston sequelize sendmail nodemailer mysql2 morgan jsonwebtoken helmet express-validator  express dotenv bcrypt
 npm i prettier cross-env eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-jest eslint-plugin-import supertest jest --save-dev
 npx eslint --init
 
 TEMPLATE ENGINE
 https://expressjs.com/en/guide/using-template-engines.html
+
+
+
+
+https://towardsdatascience.com/everything-you-need-to-know-about-regular-expressions-8f622fe10b03#quantifiers
+https://www.digitalocean.com/community/tutorials/how-to-use-joi-for-node-api-schema-validation
+https://www.youtube.com/watch?v=9RksQ5YT7FM
+
+// var term = "SH-05";
+// var re = new RegExp("^[A-Za-z]{1,2}-[0-9]{2}$");
+// if (re.test(term)) {
+//   console.log("Valid");
+// } else {
+//   console.log("Invalid");
+// }
